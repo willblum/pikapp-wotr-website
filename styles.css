@@ -1246,12 +1246,14 @@ body {
     }
 
     .nominees-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.75rem;
+        grid-template-columns: 1fr;
+        /* Switch to 1 column on small screens to prevent squashing */
+        gap: 1.5rem;
+        /* Increase gap slightly so they have room to breathe when stacked */
     }
 
     .nominee-card {
-        padding: 1.25rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .nominee-org {
