@@ -1,0 +1,1211 @@
+/* ============================================
+   WAR OF THE ROSES 2026 — Styles
+   ============================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #001b2a;
+    color: #efe8d3;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ---------- Typography ---------- */
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+}
+
+.title-icon {
+    display: inline-block;
+    color: #fecb00;
+    font-size: 0.6em;
+    vertical-align: middle;
+    margin: 0 0.4em;
+    opacity: 0.7;
+}
+
+.script {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary {
+    background: #fecb00;
+    color: #001b2a;
+}
+
+.btn-vote {
+    background: #f27ebc;
+    color: #001b2a;
+    margin-top: 2.5rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #efe8d3;
+    border: 2px solid #efe8d3;
+}
+
+.btn-outline:hover {
+    background: #efe8d3;
+    color: #001b2a;
+}
+
+/* ============================================
+   FLOATING PETALS ANIMATION
+   ============================================ */
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.petal {
+    position: absolute;
+    top: -60px;
+    font-size: 1.5rem;
+    color: rgba(180, 40, 50, 0.2);
+    animation: petalFall linear infinite;
+}
+
+.petal-1 {
+    left: 5%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+    font-size: 1.2rem;
+}
+
+.petal-2 {
+    left: 15%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    font-size: 1.8rem;
+    color: rgba(242, 126, 188, 0.15);
+}
+
+.petal-3 {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+    font-size: 1rem;
+}
+
+.petal-4 {
+    left: 50%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+    font-size: 1.5rem;
+    color: rgba(254, 203, 0, 0.12);
+}
+
+.petal-5 {
+    left: 65%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+    font-size: 1.3rem;
+}
+
+.petal-6 {
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: 5s;
+    font-size: 1.6rem;
+    color: rgba(242, 126, 188, 0.15);
+}
+
+.petal-7 {
+    left: 90%;
+    animation-duration: 16s;
+    animation-delay: 0.5s;
+    font-size: 1.1rem;
+}
+
+.petal-8 {
+    left: 42%;
+    animation-duration: 13s;
+    animation-delay: 6s;
+    font-size: 1.4rem;
+    color: rgba(254, 203, 0, 0.1);
+}
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(-60px) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg) translateX(80px);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #001b2a 0%, #012e45 50%, #001b2a 100%);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(74, 28, 29, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(62, 122, 142, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Decorative sparkle dots in hero */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(254, 203, 0, 0.15) 1px, transparent 1px),
+        radial-gradient(circle, rgba(239, 232, 211, 0.08) 1px, transparent 1px);
+    background-size: 80px 80px, 60px 60px;
+    background-position: 0 0, 30px 30px;
+    pointer-events: none;
+    animation: sparkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.hero-rose {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.6;
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.hero-rose-left {
+    left: 5%;
+    bottom: 15%;
+}
+
+.hero-rose-right {
+    right: 5%;
+    top: 15%;
+    animation-delay: -3s;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-subtitle-top {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 60px rgba(180, 40, 50, 0.2);
+}
+
+.hero-year {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    letter-spacing: 0.3em;
+    color: #fecb00;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    opacity: 0.85;
+}
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 1.5rem auto;
+    max-width: 300px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(239, 232, 211, 0.4), transparent);
+}
+
+.divider-rose {
+    color: #fecb00;
+    font-size: 1.2rem;
+    animation: spinSlow 10s linear infinite;
+}
+
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-chapter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+.section-divider {
+    height: 60px;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.section-divider svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   EVENT DETAILS
+   ============================================ */
+.event-details {
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+    text-align: center;
+    position: relative;
+}
+
+.event-details-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.event-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid #efe8d3;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.event-venue {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.event-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+}
+
+.event-date {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+    opacity: 0.7;
+}
+
+/* ============================================
+   SCHEDULE
+   ============================================ */
+.schedule {
+    padding: 5rem 2rem;
+    background: #001b2a;
+    position: relative;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.schedule-card {
+    background: var(--card-accent, #4a1c1d);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(254, 203, 0, 0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.schedule-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-card:hover::before {
+    opacity: 1;
+}
+
+.schedule-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    filter: grayscale(0.3);
+}
+
+.schedule-day {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+}
+
+.schedule-date {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.schedule-event-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.65;
+}
+
+.schedule-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.65;
+    margin-top: 0.3rem;
+}
+
+/* ============================================
+   POINT SYSTEM
+   ============================================ */
+.points-system {
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.points-card {
+    background: rgba(239, 232, 211, 0.06);
+    border: 1px solid rgba(239, 232, 211, 0.12);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.points-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(254, 203, 0, 0.3);
+}
+
+.points-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.points-value {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fecb00;
+    margin-bottom: 0.25rem;
+}
+
+.points-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.points-bonus {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(62, 122, 142, 0.15);
+    border: 1px solid rgba(62, 122, 142, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.points-bonus-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.points-bonus-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.points-bonus-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.bonus-points {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #fecb00;
+}
+
+.bonus-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.points-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   NOMINEES
+   ============================================ */
+.nominees {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #001b2a 0%, #012235 100%);
+    text-align: center;
+}
+
+.nominees-voting-info {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    color: #fecb00;
+    margin-bottom: 3rem;
+}
+
+.nominees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nominee-card {
+    background: var(--nominee-bg, #666);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #1a1a1a;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.nominee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nominee-info {
+    text-align: center;
+}
+
+.nominee-org {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nominee-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.nominee-photo-placeholder {
+    width: 140px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   SPONSORS
+   ============================================ */
+.sponsors {
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.sponsor-card {
+    background: rgba(239, 232, 211, 0.06);
+    border: 1px solid rgba(239, 232, 211, 0.15);
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.sponsor-card:hover {
+    border-color: rgba(254, 203, 0, 0.3);
+}
+
+.sponsor-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.sponsor-type {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* ============================================
+   LEADERBOARD
+   ============================================ */
+.leaderboard {
+    padding: 5rem 2rem;
+    background: #001b2a;
+    text-align: center;
+}
+
+.standings-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    opacity: 0.65;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+}
+
+.podium {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+.podium-spot {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podium-rank {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.podium-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+}
+
+.podium-bar {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.first .podium-rank {
+    color: #fecb00;
+}
+
+.first .podium-bar {
+    height: 180px;
+    background: linear-gradient(180deg, #fecb00, #b8920a);
+}
+
+.second .podium-rank {
+    color: #c0c0c0;
+}
+
+.second .podium-bar {
+    height: 130px;
+    background: linear-gradient(180deg, #c0c0c0, #888);
+}
+
+.third .podium-rank {
+    color: #cd7f32;
+}
+
+.third .podium-bar {
+    height: 90px;
+    background: linear-gradient(180deg, #cd7f32, #8b5a2b);
+}
+
+/* ============================================
+   CHARITY
+   ============================================ */
+.charity {
+    padding: 5rem 2rem;
+    background: linear-gradient(180deg, #012235, #001b2a);
+    text-align: center;
+}
+
+.charity-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.charity-icon {
+    font-size: 2.5rem;
+    color: rgba(180, 40, 50, 0.6);
+    margin-bottom: 1.5rem;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+.charity-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+/* ============================================
+   FOLLOW / INSTAGRAM
+   ============================================ */
+.follow-section {
+    padding: 2.5rem 2rem;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.follow-content {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.follow-section .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.instagram-card {
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.12), rgba(253, 29, 29, 0.12), rgba(252, 176, 69, 0.12));
+    border: 1px solid rgba(239, 232, 211, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.instagram-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(253, 29, 29, 0.3);
+}
+
+.instagram-icon {
+    color: #efe8d3;
+    opacity: 0.85;
+}
+
+.instagram-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.instagram-handle {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fecb00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.instagram-handle:hover {
+    color: #f27ebc;
+}
+
+.instagram-cta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    padding: 2.5rem 2rem;
+    background: #000;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer-rose {
+    font-size: 1.2rem;
+    color: rgba(180, 40, 50, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+.footer-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet / Half-screen */
+@media (max-width: 900px) {
+    .schedule-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nominees-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .event-venue {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .hero-rose {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Small tablet / narrow half-screen */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 5rem);
+    }
+
+    .hero-rose {
+        width: 80px;
+        height: 80px;
+        opacity: 0.4;
+    }
+
+    .event-details,
+    .schedule,
+    .nominees,
+    .sponsors,
+    .leaderboard,
+    .charity,
+    .follow-section {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.6rem, 5vw, 2.5rem);
+    }
+
+    .nominees-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .nominee-photo-placeholder {
+        width: 110px;
+        height: 140px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .podium {
+        max-width: 400px;
+    }
+
+    .first .podium-bar {
+        height: 140px;
+    }
+
+    .second .podium-bar {
+        height: 100px;
+    }
+
+    .third .podium-bar {
+        height: 70px;
+    }
+
+    .instagram-handle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large phones */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 70vh;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 12vw, 3.5rem);
+    }
+
+    .hero-year {
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+    }
+
+    .hero-subtitle-top {
+        font-size: 0.8rem;
+    }
+
+    .hero-rose {
+        display: none;
+    }
+
+    .event-details,
+    .schedule,
+    .nominees,
+    .sponsors,
+    .leaderboard,
+    .charity,
+    .follow-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .schedule-card {
+        padding: 1.5rem;
+    }
+
+    .nominees-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .nominee-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .nominee-org {
+        font-size: 1.2rem;
+    }
+
+    .nominee-photo-placeholder {
+        width: 90px;
+        height: 115px;
+    }
+
+    .nominees-voting-info {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .event-venue {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .event-description {
+        font-size: 1.1rem;
+    }
+
+    .event-date {
+        font-size: 0.95rem;
+    }
+
+    .podium {
+        gap: 0.5rem;
+        max-width: 320px;
+    }
+
+    .podium-rank {
+        font-size: 1rem;
+    }
+
+    .podium-name {
+        font-size: 0.8rem;
+    }
+
+    .first .podium-bar {
+        height: 110px;
+    }
+
+    .second .podium-bar {
+        height: 80px;
+    }
+
+    .third .podium-bar {
+        height: 55px;
+    }
+
+    .charity-text {
+        font-size: 1rem;
+    }
+
+    .sponsor-placeholder {
+        width: 160px;
+        height: 80px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 0.85rem;
+    }
+
+    .instagram-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .instagram-handle {
+        font-size: 1.3rem;
+    }
+
+    .section-divider {
+        height: 40px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .nominees-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nominee-photo-placeholder {
+        width: 120px;
+        height: 155px;
+    }
+
+    .title-icon {
+        display: none;
+    }
+}
