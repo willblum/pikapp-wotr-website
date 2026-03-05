@@ -194,169 +194,48 @@ body {
 }
 
 /* ============================================
-   HERO
+   HERO SECTION
    ============================================ */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    background: linear-gradient(180deg, #001b2a 0%, #012e45 50%, #001b2a 100%);
-    padding: 2rem;
+    width: 100%;
+    min-height: 80vh;
+    /* Give it enough height to show the collage */
+    background-color: #0d1b2a;
+    /* Overlay a dark gradient at the bottom over the wotr.png image, and a solid blue tint over the whole image */
+    background-image: linear-gradient(to top, rgba(13, 27, 42, 1) 0%, rgba(13, 27, 42, 0) 40%),
+        linear-gradient(rgba(13, 27, 42, 0.5), rgba(13, 27, 42, 0.5)),
+        url('images/wotr.png');
+    background-size: cover;
+    background-position: center 60%;
+    /* Shifted down from the top to show more people/less building */
+    background-repeat: no-repeat;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(74, 28, 29, 0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 50%, rgba(62, 122, 142, 0.15) 0%, transparent 60%);
-    pointer-events: none;
-}
-
-/* Decorative sparkle dots in hero */
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(circle, rgba(254, 203, 0, 0.15) 1px, transparent 1px),
-        radial-gradient(circle, rgba(239, 232, 211, 0.08) 1px, transparent 1px);
-    background-size: 80px 80px, 60px 60px;
-    background-position: 0 0, 30px 30px;
-    pointer-events: none;
-    animation: sparkle 8s ease-in-out infinite alternate;
-}
-
-@keyframes sparkle {
-    0% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 0.7;
-    }
-}
-
-.hero-rose {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    opacity: 0.6;
-    animation: gentleFloat 6s ease-in-out infinite;
-}
-
-.hero-rose-left {
-    left: 5%;
-    bottom: 15%;
-}
-
-.hero-rose-right {
-    right: 5%;
-    top: 15%;
-    animation-delay: -3s;
-}
-
-@keyframes gentleFloat {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-15px) rotate(5deg);
-    }
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-subtitle-top {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    opacity: 0.7;
-}
-
-.hero-title {
-    font-family: 'Cinzel', serif;
-    font-weight: 900;
-    font-size: clamp(3rem, 10vw, 7rem);
-    line-height: 1;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 60px rgba(180, 40, 50, 0.2);
-}
-
-.hero-year {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    letter-spacing: 0.3em;
-    color: #fecb00;
-    margin-bottom: 0.5rem;
-}
-
-.hero-subtitle {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    opacity: 0.85;
-}
-
-.hero-divider {
     display: flex;
-    align-items: center;
+    /* Use flexbox to easily position the cover img at the bottom */
+    align-items: flex-end;
     justify-content: center;
-    gap: 0.8rem;
-    margin: 1.5rem auto;
-    max-width: 300px;
+    padding-bottom: 2rem;
+    /* Give it a little breathing room from the very bottom edge */
 }
 
-.divider-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(239, 232, 211, 0.4), transparent);
+.hero-cover-img {
+    max-width: 800px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-top: auto;
+    /* Pushes the image down within the flex container */
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+    /* Add a shadow to pop it off the background */
 }
 
-.divider-rose {
-    color: #fecb00;
-    font-size: 1.2rem;
-    animation: spinSlow 10s linear infinite;
-}
 
-@keyframes spinSlow {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.hero-chapter {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-    opacity: 0.6;
-    text-transform: uppercase;
-}
 
 /* ============================================
    SECTION DIVIDERS
    ============================================ */
 .section-divider {
-    height: 60px;
+    height: 30px;
     width: 100%;
     background: transparent;
     overflow: hidden;
@@ -371,54 +250,131 @@ body {
    EVENT DETAILS
    ============================================ */
 .event-details {
-    padding: 5rem 2rem;
-    background: #0a0a0a;
+    padding: 6rem 2rem;
+    background-image:
+        linear-gradient(rgba(4, 25, 48, 0.8), rgba(1, 16, 36, 0.9)),
+        url('images/band.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
     text-align: center;
     position: relative;
+    border-top: 1px solid rgba(239, 232, 211, 0.05);
+    border-bottom: 1px solid rgba(239, 232, 211, 0.05);
 }
 
 .event-details-inner {
     max-width: 700px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
-.event-badge {
-    display: inline-block;
-    padding: 6px 20px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    border: 1px solid #efe8d3;
-    border-radius: 100px;
-    margin-bottom: 2rem;
-    opacity: 0.7;
+.event-details-inner.harvey-street-layout {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.event-venue {
-    font-family: 'Cinzel', serif;
+.harvey-title {
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(4.5rem, 9vw, 8.5rem);
+    color: #f1e1b8;
+    /* Beige/Cream */
+    line-height: 0.75;
+    margin: 0;
+    letter-spacing: -0.04em;
+    /* Packed tightly */
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
+    transform: scaleY(1.25);
+    /* Stretched vertically */
+    transform-origin: bottom left;
+    margin-bottom: 2rem;
 }
 
-.event-description {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-style: italic;
+.harvey-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    color: #f1e1b8;
+    margin-top: 0;
     margin-bottom: 0.5rem;
-    opacity: 0.85;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
 }
 
-.event-date {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 2.5rem;
+.ampersand {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.5em;
+    margin-right: 0.25rem;
+}
+
+.harvey-date {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: #e69a9a;
+    /* Dusty Pink */
+    margin: 0;
+    line-height: 0.75;
+    letter-spacing: -0.06em;
+    /* Extremely packed lettering */
+    text-transform: uppercase;
+    transform: scaleY(1.25);
+    /* Stretched vertically */
+    transform-origin: top left;
+    margin-bottom: 0.5rem;
+}
+
+.harvey-bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.harvey-greek {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    color: #f1e1b8;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.harvey-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.harvey-info p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #f1e1b8;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+.harvey-link {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #f1e1b8;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    text-decoration: none;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s ease;
+}
+
+.harvey-link:hover {
     opacity: 0.7;
 }
 
@@ -426,7 +382,7 @@ body {
    SCHEDULE
    ============================================ */
 .schedule {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     background: #001b2a;
     position: relative;
 }
@@ -519,6 +475,35 @@ body {
     padding: 5rem 2rem;
     background: #0a0a0a;
     text-align: center;
+}
+
+.points-system-small {
+    padding: 2.5rem 2rem;
+}
+
+.points-simple {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: rgba(254, 203, 0, 0.08);
+    border: 1px solid rgba(254, 203, 0, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem 2.5rem;
+}
+
+.points-simple .points-value {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #fecb00;
+}
+
+.points-simple .points-label {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    opacity: 0.9;
 }
 
 .points-grid {
@@ -618,9 +603,18 @@ body {
    NOMINEES
    ============================================ */
 .nominees {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     background: linear-gradient(180deg, #001b2a 0%, #012235 100%);
     text-align: center;
+}
+
+.nominees-header-img {
+    display: block;
+    max-width: 700px;
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 1.5rem;
 }
 
 .nominees-voting-info {
@@ -634,9 +628,9 @@ body {
 
 .nominees-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -678,6 +672,21 @@ body {
     color: rgba(255, 255, 255, 0.85);
 }
 
+.nominee-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.nominee-crest {
+    width: 120px;
+    height: 160px;
+    object-fit: contain;
+}
+
 .nominee-photo-placeholder {
     width: 140px;
     height: 180px;
@@ -696,50 +705,75 @@ body {
    SPONSORS
    ============================================ */
 .sponsors {
-    padding: 5rem 2rem;
+    padding: 1.25rem 2rem;
     background: #0a0a0a;
     text-align: center;
 }
 
-.sponsor-logos {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+.sponsors .section-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.3rem;
+    opacity: 0.6;
 }
 
-.sponsor-card {
-    background: rgba(239, 232, 211, 0.06);
-    border: 1px solid rgba(239, 232, 211, 0.15);
-    border-radius: 10px;
-    padding: 2rem 3rem;
+.sponsor-logo-img {
+    display: block;
+    max-width: 140px;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor-logo-img:hover {
+    opacity: 1;
+}
+
+/* ============================================
+   POINT SYSTEM (FULL)
+   ============================================ */
+.points-full {
+    padding: 3rem 2rem;
+    background: #001b2a;
     text-align: center;
-    transition: border-color 0.3s ease;
 }
 
-.sponsor-card:hover {
-    border-color: rgba(254, 203, 0, 0.3);
+.points-full-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    text-align: left;
 }
 
-.sponsor-name {
+.points-full-card {
+    padding: 0;
+}
+
+.points-full-title {
     font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #efe8d3;
     margin-bottom: 0.3rem;
 }
 
-.sponsor-type {
+.points-full-detail {
     font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    opacity: 0.6;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.6;
 }
 
 /* ============================================
    LEADERBOARD
    ============================================ */
 .leaderboard {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     background: #001b2a;
     text-align: center;
 }
@@ -820,56 +854,156 @@ body {
    CHARITY
    ============================================ */
 .charity {
-    padding: 5rem 2rem;
-    background: linear-gradient(180deg, #012235, #001b2a);
+    padding: 3rem 2rem;
+    background: #0d1b2a;
+    /* Solid dark navy to match image */
     text-align: center;
 }
 
-.charity-content {
-    max-width: 750px;
+.charity-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.charity-icon {
-    font-size: 2.5rem;
-    color: rgba(180, 40, 50, 0.6);
-    margin-bottom: 1.5rem;
-    animation: heartbeat 2s ease-in-out infinite;
+.charity-content {
+    flex: 1 1 450px;
+    text-align: left;
 }
 
-@keyframes heartbeat {
+.charity .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #efe8d3;
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+}
 
-    0%,
-    100% {
-        transform: scale(1);
+.charity-icon {
+    font-size: 2rem;
+    color: #9c2738;
+    /* darker red like image */
+    margin-bottom: 2rem;
+    animation: heartbeat 2s ease-in-out infinite;
+    text-align: left;
+}
+
+.charity-gallery {
+    flex: 1 1 450px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.charity-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.charity-img:hover {
+    transform: scale(1.03);
+}
+
+.charity-img-main {
+    grid-column: 1 / 3;
+    aspect-ratio: 16 / 9;
+}
+
+.charity-img-sub1,
+.charity-img-sub2 {
+    aspect-ratio: 1 / 1;
+}
+
+/* Decorative floating roses */
+.charity-rose {
+    position: absolute;
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.charity-rose-1 {
+    top: 5%;
+    left: 2%;
+    transform: rotate(-15deg);
+    font-size: 2.5rem;
+}
+
+.charity-rose-2 {
+    bottom: -2%;
+    right: 5%;
+    transform: rotate(25deg);
+    font-size: 3rem;
+}
+
+.charity-rose-3 {
+    top: 45%;
+    right: -5%;
+    transform: rotate(10deg);
+}
+
+.charity-rose-4 {
+    bottom: 40%;
+    left: -3%;
+    transform: rotate(-30deg);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .charity-content {
+        text-align: center;
     }
 
-    15% {
-        transform: scale(1.15);
-    }
-
-    30% {
-        transform: scale(1);
-    }
-
-    45% {
-        transform: scale(1.1);
+    .charity-icon {
+        text-align: center;
     }
 }
 
 .charity-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.05rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    opacity: 0.85;
+    margin-bottom: 2rem;
+    color: #efe8d3;
+}
+
+.charity-text b {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.charity-footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.charity-badge {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* ============================================
    FOLLOW / INSTAGRAM
    ============================================ */
 .follow-section {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 2rem;
     background: #0a0a0a;
     text-align: center;
 }
@@ -885,20 +1019,15 @@ body {
 }
 
 .instagram-card {
-    background: linear-gradient(135deg, rgba(131, 58, 180, 0.12), rgba(253, 29, 29, 0.12), rgba(252, 176, 69, 0.12));
-    border: 1px solid rgba(239, 232, 211, 0.1);
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
-    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .instagram-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(253, 29, 29, 0.3);
+    opacity: 0.8;
 }
 
 .instagram-icon {
@@ -1028,6 +1157,19 @@ body {
     .nominee-photo-placeholder {
         width: 110px;
         height: 140px;
+    }
+
+    .nominees-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nominees-header-img {
+        width: 200px;
+    }
+
+    .nominees-header-text {
+        text-align: center;
     }
 
     .btn {

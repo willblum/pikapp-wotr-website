@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,53 +31,31 @@
 
   <!-- ===================== HERO SECTION ===================== -->
   <section id="hero" class="hero">
-    <!-- Decorative SVG roses -->
-    <svg class="hero-rose hero-rose-left" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true">
-      <circle cx="60" cy="60" r="20" fill="rgba(180,40,50,0.25)" />
-      <circle cx="60" cy="40" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="45" cy="55" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="75" cy="55" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="50" cy="45" r="16" fill="rgba(180,40,50,0.15)" />
-      <circle cx="70" cy="45" r="16" fill="rgba(180,40,50,0.15)" />
-      <path d="M58 80 Q60 60 62 80 Q60 95 58 80Z" fill="rgba(40,120,60,0.25)" />
-      <path d="M55 85 Q45 78 55 75" stroke="rgba(40,120,60,0.2)" stroke-width="2" fill="none" />
-    </svg>
-    <svg class="hero-rose hero-rose-right" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true">
-      <circle cx="60" cy="60" r="20" fill="rgba(180,40,50,0.25)" />
-      <circle cx="60" cy="40" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="45" cy="55" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="75" cy="55" r="18" fill="rgba(180,40,50,0.2)" />
-      <circle cx="50" cy="45" r="16" fill="rgba(180,40,50,0.15)" />
-      <circle cx="70" cy="45" r="16" fill="rgba(180,40,50,0.15)" />
-      <path d="M58 80 Q60 60 62 80 Q60 95 58 80Z" fill="rgba(40,120,60,0.25)" />
-      <path d="M65 85 Q75 78 65 75" stroke="rgba(40,120,60,0.2)" stroke-width="2" fill="none" />
-    </svg>
-
-    <div class="hero-content">
-      <p class="hero-subtitle-top">Pi Kappa Phi Presents</p>
-      <h1 class="hero-title">WAR OF THE<br>ROSES</h1>
-      <p class="hero-year">2026</p>
-      <p class="hero-subtitle script">benefiting the ability experience</p>
-      <!-- Decorative divider -->
-      <div class="hero-divider">
-        <span class="divider-line"></span>
-        <span class="divider-rose">&#10044;</span>
-        <span class="divider-line"></span>
-      </div>
-      <p class="hero-chapter">University of Illinois Chapter</p>
-    </div>
+    <img src="images/cover.png" alt="War of the Roses 2026 — Pi Kappa Phi" class="hero-cover-img">
   </section>
 
   <!-- ===================== EVENT DETAILS ===================== -->
   <section id="event-details" class="event-details">
-    <div class="event-details-inner">
-      <div class="event-badge">PHILANTHROPY WEEK</div>
-      <h2 class="event-venue">ROSE PARTY</h2>
-      <p class="event-description">Crowning of the Rose Queen</p>
-      <p class="event-date">Saturday Night</p>
-      <a href="#" class="btn btn-primary" id="buy-tickets-btn">Click to Buy Tickets</a>
+    <div class="event-details-inner harvey-street-layout">
+      <!-- Top Line -->
+      <h1 class="harvey-title">ROSE PARTY</h1>
+
+      <!-- Subtitle -->
+      <div class="harvey-subtitle">
+        <span class="ampersand">&amp;</span> CROWNING OF THE ROSE QUEEN
+      </div>
+
+      <!-- Main Date -->
+      <h2 class="harvey-date">SATURDAY APRIL 18</h2>
+
+      <!-- Bottom Row with Greek Letters and Details -->
+      <div class="harvey-bottom-row">
+        <div class="harvey-greek">ΠΚΦ</div>
+        <div class="harvey-info">
+          <p>8:00-11:00 PM AT PIKAPP</p>
+          <a href="#" class="harvey-link">CLICK HERE TO BUY TICKETS</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -93,182 +71,123 @@
   <section id="schedule" class="schedule">
     <h2 class="section-title">
       <span class="title-icon">&#10043;</span>
-      SCHEDULE OF EVENTS
+      SCHEDULE (APR. 13-18)
       <span class="title-icon">&#10043;</span>
     </h2>
     <div class="schedule-grid">
       <div class="schedule-card" style="--card-accent: #4a1c1d;">
         <div class="schedule-icon">&#9872;</div>
         <div class="schedule-day">MONDAY</div>
+        <div class="schedule-date">April 13</div>
         <div class="schedule-event-name">Banner Competition</div>
-        <div class="schedule-detail">Post banners at 10 AM</div>
-        <div class="schedule-detail">Post on Instagram</div>
+        <div class="schedule-detail">Banners due by Sunday night</div>
+        <div class="schedule-detail">Banners will be posted at 10 AM</div>
+        <div class="schedule-detail" style="margin-top: 0.75rem;">10 Likes = 1 Point</div>
+        <div class="schedule-detail" style="margin-top: 0.75rem; font-weight: 600; opacity: 0.85;">Winners</div>
+        <div class="schedule-detail">1st &mdash; 200 pts</div>
+        <div class="schedule-detail">2nd &mdash; 150 pts</div>
+        <div class="schedule-detail">3rd &mdash; 100 pts</div>
       </div>
       <div class="schedule-card" style="--card-accent: #3e7a8e;">
         <div class="schedule-icon">&#9917;</div>
         <div class="schedule-day">TUESDAY</div>
+        <div class="schedule-date">April 14</div>
         <div class="schedule-event-name">Wheelchair Basketball<br>Sports Day</div>
         <div class="schedule-detail">Points for participation</div>
       </div>
       <div class="schedule-card" style="--card-accent: #4a1c1d;">
         <div class="schedule-icon">&#127828;</div>
         <div class="schedule-day">WEDNESDAY</div>
+        <div class="schedule-date">April 15</div>
         <div class="schedule-event-name">Canes Fundraiser</div>
         <div class="schedule-detail">1 Receipt = 5 Points</div>
       </div>
       <div class="schedule-card" style="--card-accent: #3e7a8e;">
         <div class="schedule-icon">&#127790;</div>
         <div class="schedule-day">THURSDAY</div>
+        <div class="schedule-date">April 16</div>
         <div class="schedule-event-name">Grill Out</div>
         <div class="schedule-detail">5:00 PM</div>
       </div>
       <div class="schedule-card" style="--card-accent: #4a1c1d;">
         <div class="schedule-icon">&#128690;</div>
         <div class="schedule-day">FRIDAY</div>
+        <div class="schedule-date">April 17</div>
         <div class="schedule-event-name">Bike-a-Thon</div>
         <div class="schedule-detail">10 AM Friday &ndash; 10 AM Saturday</div>
         <div class="schedule-detail">2 Bikes</div>
+        <div class="schedule-detail" style="margin-top: 0.75rem;">20 pts &mdash; 30 min shift</div>
+        <div class="schedule-detail">50 pts &mdash; Full hour shift</div>
+        <div class="schedule-detail" style="margin-top: 0.5rem; font-style: italic;">Power Hour &mdash; 2x points</div>
       </div>
       <div class="schedule-card" style="--card-accent: #3e7a8e;">
         <div class="schedule-icon">&#127936;</div>
         <div class="schedule-day">SATURDAY</div>
+        <div class="schedule-date">April 18</div>
         <div class="schedule-event-name">Dodgeball Tournament</div>
-        <div class="schedule-detail">11:00 AM &bull; Setup at 10 AM</div>
+        <div class="schedule-detail">11:00 AM</div>
+        <div class="schedule-event-name" style="margin-top: 1rem;">Rose Party</div>
+        <div class="schedule-detail">Saturday Night</div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== DECORATIVE DIVIDER ===================== -->
-  <div class="section-divider" aria-hidden="true">
-    <svg viewBox="0 0 800 60" preserveAspectRatio="none">
-      <path d="M0,30 Q200,0 400,30 Q600,60 800,30" stroke="rgba(180,40,50,0.3)" stroke-width="1" fill="none" />
-      <path d="M0,30 Q200,60 400,30 Q600,0 800,30" stroke="rgba(62,122,142,0.3)" stroke-width="1" fill="none" />
-    </svg>
-  </div>
-
-  <!-- ===================== POINT SYSTEM ===================== -->
-  <section id="points" class="points-system">
-    <h2 class="section-title">
-      <span class="title-icon">&#10043;</span>
-      POINT SYSTEM
-      <span class="title-icon">&#10043;</span>
-    </h2>
-    <div class="points-grid">
-      <div class="points-card">
-        <div class="points-icon">&#128176;</div>
-        <div class="points-value">$1</div>
-        <div class="points-label">= 1 Point</div>
-      </div>
-      <div class="points-card">
-        <div class="points-icon">&#10084;</div>
-        <div class="points-value">10 Likes</div>
-        <div class="points-label">= 1 Point</div>
-      </div>
-      <div class="points-card">
-        <div class="points-icon">&#128203;</div>
-        <div class="points-value">1 Receipt</div>
-        <div class="points-label">= 5 Points (Canes)</div>
-      </div>
-    </div>
-    <div class="points-bonus">
-      <h3 class="points-bonus-title">&#128690; Bike-a-Thon Bonus</h3>
-      <div class="points-bonus-grid">
-        <div class="points-bonus-item">
-          <span class="bonus-points">20 pts</span>
-          <span class="bonus-desc">30 min shift</span>
-        </div>
-        <div class="points-bonus-item">
-          <span class="bonus-points">50 pts</span>
-          <span class="bonus-desc">Full hour shift</span>
-        </div>
-      </div>
-      <p class="points-note">Power Hour &mdash; 2x points during designated hours</p>
-    </div>
-  </section>
 
   <!-- ===================== NOMINEES ===================== -->
   <section id="nominees" class="nominees">
-    <h2 class="section-title">NOMINEES FOR<br>ROSE QUEEN</h2>
+    <img src="images/rose-queen-header.png" alt="Nominees for Rose Queen" class="nominees-header-img">
     <p class="nominees-voting-info">&#10047; $1 = 1 VOTE &#10047;</p>
     <div class="nominees-grid">
 
-      <div class="nominee-card" style="--nominee-bg: #b0c4de;">
+      <div class="nominee-card" style="--nominee-bg: #c41e3a;">
         <div class="nominee-info">
-          <h3 class="nominee-org">ADPI</h3>
+          <h3 class="nominee-org">ALPHA OMICRON PI</h3>
           <p class="nominee-name">Nominee TBD</p>
         </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
+        <div class="nominee-bottom">
+          <img src="images/aopi crest.webp" alt="AOPi Crest" class="nominee-crest">
+          <div class="nominee-photo-placeholder">
+            <span>Photo</span>
+          </div>
         </div>
       </div>
 
-      <div class="nominee-card" style="--nominee-bg: #c4a882;">
+      <div class="nominee-card" style="--nominee-bg: #d48b8b;">
         <div class="nominee-info">
-          <h3 class="nominee-org">ALPHA PHI</h3>
+          <h3 class="nominee-org">DELTA ZETA</h3>
           <p class="nominee-name">Nominee TBD</p>
         </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
+        <div class="nominee-bottom">
+          <img src="images/Delta_Zeta_crest.png" alt="DZ Crest" class="nominee-crest">
+          <div class="nominee-photo-placeholder">
+            <span>Photo</span>
+          </div>
         </div>
       </div>
 
-      <div class="nominee-card" style="--nominee-bg: #8fbc8f;">
-        <div class="nominee-info">
-          <h3 class="nominee-org">AXO</h3>
-          <p class="nominee-name">Nominee TBD</p>
-        </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
-        </div>
-      </div>
-
-      <div class="nominee-card" style="--nominee-bg: #dda0dd;">
-        <div class="nominee-info">
-          <h3 class="nominee-org">PHI MU</h3>
-          <p class="nominee-name">Nominee TBD</p>
-        </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
-        </div>
-      </div>
-
-      <div class="nominee-card" style="--nominee-bg: #eec966;">
+      <div class="nominee-card" style="--nominee-bg: #7b3f61;">
         <div class="nominee-info">
           <h3 class="nominee-org">PI BETA PHI</h3>
           <p class="nominee-name">Nominee TBD</p>
         </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
+        <div class="nominee-bottom">
+          <img src="images/Pi_Beta_Phi_crest.png" alt="Pi Phi Crest" class="nominee-crest">
+          <div class="nominee-photo-placeholder">
+            <span>Photo</span>
+          </div>
         </div>
       </div>
 
-      <div class="nominee-card" style="--nominee-bg: #7fa8c9;">
+      <div class="nominee-card" style="--nominee-bg: #cc2229;">
         <div class="nominee-info">
-          <h3 class="nominee-org">TRI DELTA</h3>
+          <h3 class="nominee-org">ALPHA GAMMA DELTA</h3>
           <p class="nominee-name">Nominee TBD</p>
         </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
-        </div>
-      </div>
-
-      <div class="nominee-card" style="--nominee-bg: #a9a9a9;">
-        <div class="nominee-info">
-          <h3 class="nominee-org">ZTA</h3>
-          <p class="nominee-name">Nominee TBD</p>
-        </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
-        </div>
-      </div>
-
-      <div class="nominee-card" style="--nominee-bg: #b8a9c9;">
-        <div class="nominee-info">
-          <h3 class="nominee-org">DZ</h3>
-          <p class="nominee-name">Nominee TBD</p>
-        </div>
-        <div class="nominee-photo-placeholder">
-          <span>Photo</span>
+        <div class="nominee-bottom">
+          <img src="images/Alpha_Gamma_Delta_crest.png" alt="AGD Crest" class="nominee-crest">
+          <div class="nominee-photo-placeholder">
+            <span>Photo</span>
+          </div>
         </div>
       </div>
 
@@ -279,12 +198,9 @@
   <!-- ===================== SPONSORS ===================== -->
   <section id="sponsors" class="sponsors">
     <h2 class="section-title">SPONSORS</h2>
-    <div class="sponsor-logos">
-      <div class="sponsor-card">
-        <div class="sponsor-name">Kendra Scott</div>
-        <div class="sponsor-type">In-Kind Sponsorship</div>
-      </div>
-    </div>
+    <a href="https://www.kendrascott.com" target="_blank" rel="noopener">
+      <img src="images/Kendra-Scott-Logo.png" alt="Kendra Scott" class="sponsor-logo-img">
+    </a>
   </section>
 
   <!-- ===================== LEADERBOARD ===================== -->
@@ -294,7 +210,7 @@
       CURRENT STANDINGS
       <span class="title-icon">&#127942;</span>
     </h2>
-    <p class="standings-subtitle">Sorority Chapter Rankings</p>
+    <p class="standings-subtitle">Chapter Rankings</p>
     <div class="podium">
       <div class="podium-spot second">
         <div class="podium-rank">2nd</div>
@@ -316,29 +232,83 @@
 
   <!-- ===================== CHARITY INFO ===================== -->
   <section id="charity" class="charity">
-    <div class="charity-content">
-      <h2 class="section-title">WHAT IS THE<br>ABILITY EXPERIENCE?</h2>
-      <div class="charity-icon" aria-hidden="true">&#10084;</div>
-      <p class="charity-text">
-        Founded in 1977, The Ability Experience is Pi Kappa Phi's national philanthropy
-        that serves people with disabilities. Through events like War of the Roses, we
-        raise funds to support programs that build inclusive communities and empower
-        individuals with disabilities to reach their full potential.
-      </p>
-      <p class="charity-text">
-        Since 1987, Journey of Hope cyclists have pedaled across the country to spread a
-        message of acceptance and understanding for people with disabilities. All proceeds
-        from War of the Roses go directly to supporting these life-changing programs.
-      </p>
-      <a href="https://www.abilityexperience.org" class="btn btn-outline" id="learn-more-btn" target="_blank"
-        rel="noopener">Learn More</a>
+    <div class="charity-layout">
+      <!-- Left side: Images -->
+      <div class="charity-gallery">
+        <div class="charity-rose charity-rose-1">&#127801;</div>
+        <div class="charity-rose charity-rose-2">&#127801;</div>
+        <div class="charity-rose charity-rose-3">&#127801;</div>
+        <div class="charity-rose charity-rose-4">&#127801;</div>
+        <img src="images/wotrcomp1.png" alt="War of the Roses Competition" class="charity-img charity-img-main">
+        <img src="images/bike1.png" alt="Journey of Hope Cyclists" class="charity-img charity-img-sub1">
+        <img src="images/bike2.png" alt="Journey of Hope Cyclists" class="charity-img charity-img-sub2">
+      </div>
+
+      <!-- Right side: Text -->
+      <div class="charity-content">
+        <h2 class="section-title">WHAT IS<br>THE ABILITY EXPERIENCE</h2>
+        <p class="charity-text">
+          The Ability Experience is the philanthropic initiative of the Pi Kappa Phi fraternity that remains, to this
+          day, an unparalleled success in the Greek world. Founded in 1977, we strive to instill a passion for lifelong
+          service in our fraternity members while helping to empower people living with disabilities.
+        </p>
+        <p class="charity-text">
+          <b>Disability doesn't mean 'inability'.</b> People with disabilities often have to do things a little
+          differently. By promoting an understanding of another person's situation, feelings, thoughts and attitudes,
+          The Ability Experience's empathy training exercises simulate what it may be like to live with a disability.
+          Individuals gain firsthand experience and a better perspective on some of the challenges that people with
+          disabilities face in their lives every day.
+        </p>
+        <p class="charity-text" style="margin-bottom: 0;">
+          <b>Every dollar you donate goes to benefiting the volunteer, fundraising, and awareness efforts of The Ability
+            Experience.</b>
+        </p>
+        <div class="charity-footer">
+          <img src="images/The-Ability-Experience-Logo.png" alt="The Ability Experience Badge" class="charity-badge">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POINT SYSTEM ===================== -->
+  <section id="points" class="points-full">
+    <h2 class="section-title">
+      <span class="title-icon">&#10043;</span>
+      POINT SYSTEM
+      <span class="title-icon">&#10043;</span>
+    </h2>
+    <div class="points-full-grid">
+
+      <div class="points-full-card">
+        <div class="points-full-title">&#9872; Banner Competition</div>
+        <div class="points-full-detail">10 Likes = 1 Point</div>
+        <div class="points-full-detail">Winners: 1st &mdash; 200 pts &bull; 2nd &mdash; 150 pts &bull; 3rd &mdash; 100
+          pts</div>
+      </div>
+
+      <div class="points-full-card">
+        <div class="points-full-title">&#128690; Bike-a-Thon</div>
+        <div class="points-full-detail">30 min shift = 20 pts</div>
+        <div class="points-full-detail">Full hour shift = 50 pts</div>
+        <div class="points-full-detail" style="font-style: italic;">Power Hour &mdash; 2x points</div>
+      </div>
+
+      <div class="points-full-card">
+        <div class="points-full-title">&#127828; Canes Fundraiser</div>
+        <div class="points-full-detail">1 Receipt = 5 Points</div>
+      </div>
+
+      <div class="points-full-card">
+        <div class="points-full-title">&#128176; Classy Donation</div>
+        <div class="points-full-detail">Each non-event donation = $1 per point</div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===================== FOLLOW US / INSTAGRAM ===================== -->
   <section id="follow" class="follow-section">
     <div class="follow-content">
-      <h2 class="section-title">FOLLOW US</h2>
       <div class="instagram-card">
         <div class="instagram-icon">
           <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
