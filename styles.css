@@ -396,11 +396,12 @@ body {
 }
 
 .schedule-card {
-    background: var(--card-accent, #4a1c1d);
+    background: rgba(239, 232, 211, 0.05);
+    border: 1px solid rgba(239, 232, 211, 0.1);
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -420,6 +421,7 @@ body {
 .schedule-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(254, 203, 0, 0.3);
 }
 
 .schedule-card:hover::before {
@@ -670,6 +672,19 @@ body {
     font-weight: 500;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.85);
+}
+
+.nominee-points {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #fecb00;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(254, 203, 0, 0.3);
 }
 
 .nominee-bottom {
