@@ -668,11 +668,14 @@ body {
 }
 
 .nominee-name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 2.2rem;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    letter-spacing: 0.02em;
+    margin-top: -0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .nominee-points {
