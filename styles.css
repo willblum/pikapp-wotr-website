@@ -668,13 +668,12 @@ body {
 }
 
 .nominee-name {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 1.8rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     margin-top: 0;
     margin-bottom: 0.2rem;
 }
